@@ -6,8 +6,8 @@
 //###################################################################################
 #define	_DS18B20_USE_FREERTOS		    				1
 #define _DS18B20_MAX_SENSORS		    				1
-#define	_DS18B20_GPIO												DS18B20_GPIO_Port
-#define	_DS18B20_PIN												DS18B20_Pin
+#define	_DS18B20_GPIO												GPIOC
+#define	_DS18B20_PIN												GPIO_PIN_4
 
 #define	_DS18B20_CONVERT_TIMEOUT_MS					5000		
 #if (_DS18B20_USE_FREERTOS==1)
@@ -15,7 +15,7 @@
 #endif
 
 
-#define	_DS18B20_TIMER											htim13						
+#define	_DS18B20_TIMER											htim17
 //###################################################################################
 
 #endif

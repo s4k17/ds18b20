@@ -10,6 +10,8 @@
 
 #if (_DS18B20_USE_FREERTOS==1)
 #include "cmsis_os.h"
+#include "cmsis_os2.h"
+
 #define	Ds18b20Delay(x)			osDelay(x)
 #else
 #define	Ds18b20Delay(x)			HAL_Delay(x)
@@ -20,7 +22,7 @@ typedef struct
 {
 	uint8_t 	Address[8];
 	float 		Temperature;
-	bool			DataIsValid;	
+	bool		DataIsValid;
 	
 }Ds18b20Sensor_t;
 //###################################################################################

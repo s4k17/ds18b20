@@ -39,7 +39,7 @@ void ONEWIRE_INPUT(OneWire_t *gp)
 	gpinit.Mode = GPIO_MODE_INPUT;
 	gpinit.Pull = GPIO_NOPULL;
 	gpinit.Speed = GPIO_SPEED_FREQ_HIGH;
-	gpinit.Pin = gp->GPIO_Pin;	
+	gpinit.Pin = gp->GPIO_Pin;
 	HAL_GPIO_Init(gp->GPIOx,&gpinit);
 }	
 void ONEWIRE_OUTPUT(OneWire_t *gp)
